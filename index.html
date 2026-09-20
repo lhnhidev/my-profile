@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Le Hoang Nhi — Developer Profile</title>
+  <meta name="description" content="Personal developer profile of Le Hoang Nhi (lhnhidev), Valorant themed." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { val: { red: '#FF4655', dark: '#0F1923', panel: '#1F2326', cream: '#ECE8E1', teal: '#17DEAF' } },
+          fontFamily: { display: ['"Barlow Condensed"', 'sans-serif'], body: ['"Be Vietnam Pro"', 'sans-serif'] }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-val-dark text-val-cream font-body antialiased">
+
+  <!-- NAV -->
+  <header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-val-dark/80 border-b border-white/5">
+    <div id="progress"></div>
+    <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+      <a href="#home" class="font-display text-2xl font-bold tracking-widest">
+        <span class="text-val-red">LHN</span>HI<span class="text-val-red">.</span>DEV
+      </a>
+      <ul class="hidden md:flex gap-7 font-display text-lg tracking-widest uppercase">
+        <li><a class="nav-link" href="#about" data-i18n="nav.about"></a></li>
+        <li><a class="nav-link" href="#experience" data-i18n="nav.experience"></a></li>
+        <li><a class="nav-link" href="#skills" data-i18n="nav.skills"></a></li>
+        <li><a class="nav-link" href="#projects" data-i18n="nav.projects"></a></li>
+        <li><a class="nav-link" href="#hobbies" data-i18n="nav.hobbies"></a></li>
+        <li><a class="nav-link" href="#contact" data-i18n="nav.contact"></a></li>
+      </ul>
+      <div class="flex items-center gap-3">
+        <!-- Music player: spinning disc, click to pick a track -->
+        <div class="player" id="player">
+          <button id="discBtn" class="disc-btn" aria-haspopup="true" aria-expanded="false" aria-controls="playerPop" data-i18n-aria="player.title">
+            <span class="disc" aria-hidden="true"></span>
+          </button>
+          <div id="playerPop" class="player-pop" role="dialog" hidden>
+            <div class="flex items-center justify-between gap-3">
+              <p class="tag !text-xs" data-i18n="player.title"></p>
+              <button id="playToggle" class="pp-btn" aria-label="Play / Pause"><svg class="ic-play" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.500z"/></svg><svg class="ic-pause" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg></button>
+            </div>
+            <ul id="trackList" class="mt-3 space-y-2"></ul>
+            <label class="vol"><span data-i18n="player.volume"></span><input id="vol" type="range" min="0" max="1" step="0.01" value="0.6" /></label>
+            <p id="playerNote" class="mt-2 text-xs text-val-red hidden" data-i18n="player.missing"></p>
+          </div>
+          <div class="player-hint" data-i18n="player.hint"></div>
+        </div>
+        <div class="flex font-display tracking-widest text-sm border border-white/20" role="group" aria-label="Language">
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="vi">VI</button>
+        </div>
+        <button id="menuBtn" class="md:hidden w-10 h-10 grid place-items-center border border-white/20" aria-label="Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+    <ul id="mobileMenu" class="hidden md:hidden flex-col px-5 pb-4 font-display text-xl tracking-widest uppercase bg-val-dark border-t border-white/5">
+      <li><a class="block py-3" href="#about" data-i18n="nav.about"></a></li>
+      <li><a class="block py-3" href="#experience" data-i18n="nav.experience"></a></li>
+      <li><a class="block py-3" href="#skills" data-i18n="nav.skills"></a></li>
+      <li><a class="block py-3" href="#projects" data-i18n="nav.projects"></a></li>
+      <li><a class="block py-3" href="#hobbies" data-i18n="nav.hobbies"></a></li>
+      <li><a class="block py-3" href="#contact" data-i18n="nav.contact"></a></li>
+    </ul>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="relative min-h-screen flex items-center overflow-hidden pt-16">
+      <img src="https://media.valorant-api.com/maps/7eaecc1b-4337-bbf6-6ab9-04b8f06b3319/splash.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20" loading="eager" />
+      <video class="bg-vid bg-vid-hero" muted loop playsinline preload="none" aria-hidden="true" data-desktop-only
+             data-src="assets/video/hero-banner.mp4" data-t="0,9.8"></video>
+      <div class="absolute inset-0 bg-gradient-to-r from-val-dark via-val-dark/90 to-val-dark/30"></div>
+      <div class="absolute inset-0 grid-bg"></div>
+      <div class="hero-word" aria-hidden="true">NHI</div>
+
+      <!-- HUD lines (Figma "THE FOLIO" style) -->
+      <div class="hud-line hud-line-l" aria-hidden="true"><i></i></div>
+      <div class="hud-year" aria-hidden="true">20<b>26</b></div>
+
+      <!-- Agent art sits inside the same max-w-6xl column as the text so it lines up on any screen width -->
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="relative max-w-6xl mx-auto px-5 h-full">
+          <img src="assets/chamber.png" alt="Valorant agent Chamber"
+               class="absolute right-[-10%] md:right-5 bottom-14 h-[72vh] md:h-[calc(88vh-100px)] object-contain object-bottom opacity-30 md:opacity-100 hero-agent" data-hero-art />
+        </div>
+      </div>
+
+      <div class="relative max-w-6xl mx-auto px-5 w-full">
+        <p class="tag" data-reveal data-i18n="hero.tag"></p>
+        <h1 class="font-display font-bold uppercase leading-[0.9] text-6xl sm:text-8xl md:text-9xl mt-4" data-reveal>
+          Le Hoang <span class="text-val-red">Nhi</span>
+        </h1>
+        <p class="font-display text-2xl md:text-3xl tracking-widest uppercase mt-4 text-val-cream/80 flex items-center gap-3" data-reveal>
+          <span class="inline-block w-8 h-[3px] bg-val-red"></span><span id="rotator">Full-stack Web Developer</span>
+        </p>
+        <p class="max-w-xl mt-6 text-val-cream/70 leading-relaxed" data-reveal data-i18n="hero.lead"></p>
+
+        <div class="status-pill mt-6" data-reveal>
+          <span class="dot"></span>
+          <span data-i18n="hero.status"></span>
+        </div>
+
+        <div class="flex flex-wrap gap-4 mt-8" data-reveal>
+          <a href="#projects" class="btn btn-primary"><span data-i18n="hero.cta1"></span></a>
+          <a href="#contact" class="btn btn-ghost"><span data-i18n="hero.cta2"></span></a>
+        </div>
+        <dl class="flex gap-8 sm:gap-10 mt-12" data-reveal>
+          <div><dt class="stat-label" data-i18n="stats.repos"></dt><dd class="stat-num" data-count="41">0</dd></div>
+          <div><dt class="stat-label" data-i18n="stats.followers"></dt><dd class="stat-num" data-count="13">0</dd></div>
+          <div><dt class="stat-label" data-i18n="stats.gpa"></dt><dd class="stat-num" data-count="3.83" data-dec="2">0</dd></div>
+        </dl>
+      </div>
+
+      <a href="#about" class="scroll-cue" aria-label="Scroll"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 9l7 7 7-7"/></svg></a>
+    </section>
+
+    <!-- TICKER -->
+    <div class="ticker" aria-hidden="true"><div id="ticker" class="ticker-track"></div></div>
+
+    <!-- ABOUT -->
+    <section id="about" class="section relative overflow-hidden">
+      <div class="sec-mark" data-mark-i18n="nav.about" aria-hidden="true"></div>
+      <div class="relative max-w-6xl mx-auto px-5">
+        <div class="sec-head" data-reveal><span class="sec-no">01</span><h2 class="title" data-i18n="about.title"></h2><i class="sec-line"></i></div>
+        <div class="grid md:grid-cols-5 gap-12 items-center mt-10">
+          <div class="md:col-span-2" data-reveal>
+            <div class="agent-card">
+              <img src="assets/avatar.jpg" onerror="this.onerror=null;this.src='https://avatars.githubusercontent.com/u/137694596?v=4'" alt="Le Hoang Nhi avatar" class="w-full aspect-square object-cover" />
+              <div class="agent-card-bar">
+                <span class="font-display text-2xl tracking-widest">LHNHIDEV</span>
+                <span class="text-xs tracking-widest text-val-red" data-i18n="about.badge"></span>
+              </div>
+            </div>
+          </div>
+          <div class="md:col-span-3">
+            <p class="text-val-cream/75 leading-relaxed" data-reveal data-i18n="about.p1"></p>
+            <p class="mt-4 text-val-cream/75 leading-relaxed" data-reveal data-i18n="about.p2"></p>
+            <p class="quote mt-6" data-reveal data-i18n="about.quote"></p>
+            <ul class="grid sm:grid-cols-2 gap-3 mt-8" data-reveal>
+              <li class="info"><span data-i18n="about.schoolLabel"></span><b data-i18n="about.school"></b></li>
+              <li class="info"><span data-i18n="about.locLabel"></span><b data-i18n="about.loc"></b></li>
+              <li class="info"><span data-i18n="about.stackLabel"></span><b>React · TypeScript · .NET · Node.js</b></li>
+              <li class="info"><span data-i18n="about.interestLabel"></span><b data-i18n="about.interest"></b></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section relative overflow-hidden bg-val-panel/40">
+      <img src="https://media.valorant-api.com/maps/d960549e-485c-e861-8d71-aa9d1aed12a2/splash.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-[0.07]" loading="lazy" />
+      <div class="sec-mark" data-mark-i18n="nav.experience" aria-hidden="true"></div>
+      <div class="relative max-w-6xl mx-auto px-5">
+        <div class="sec-head" data-reveal><span class="sec-no">02</span><h2 class="title" data-i18n="exp.title"></h2><i class="sec-line"></i></div>
+        <p class="mt-4 text-val-cream/60 max-w-xl" data-reveal data-i18n="exp.sub"></p>
+        <div class="grid lg:grid-cols-3 gap-8 mt-10">
+          <ol id="expList" class="timeline lg:col-span-2"></ol>
+          <div id="eduCard"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section relative overflow-hidden">
+      <div class="sec-mark" data-mark-i18n="nav.skills" aria-hidden="true"></div>
+      <div class="relative max-w-6xl mx-auto px-5">
+        <div class="sec-head" data-reveal><span class="sec-no">03</span><h2 class="title" data-i18n="skills.title"></h2><i class="sec-line"></i></div>
+        <p class="mt-4 text-val-cream/60 max-w-xl" data-reveal data-i18n="skills.sub"></p>
+        <div id="skillGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10"></div>
+
+        <div class="mt-20 max-w-3xl">
+          <h3 class="sub-title" data-reveal data-i18n="skills.langTitle"></h3>
+          <div id="langBars" class="grid sm:grid-cols-2 gap-x-10 gap-y-5 mt-6"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section relative overflow-hidden bg-val-panel/40">
+      <div class="sec-mark" data-mark-i18n="nav.projects" aria-hidden="true"></div>
+      <div class="relative max-w-6xl mx-auto px-5">
+        <div class="sec-head" data-reveal><span class="sec-no">04</span><h2 class="title" data-i18n="projects.title"></h2><i class="sec-line"></i></div>
+        <p class="mt-4 text-val-cream/60 max-w-xl" data-reveal data-i18n="projects.sub"></p>
+        <div id="projectGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10"></div>
+        <div class="mt-10" data-reveal>
+          <a href="https://github.com/lhnhidev?tab=repositories" target="_blank" rel="noopener" class="btn btn-ghost"><span data-i18n="projects.all"></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOBBIES (scroll-pinned) -->
+    <section id="hobbies" class="hobbies">
+      <div class="hobby-stage">
+        <div class="hobby-bgs" aria-hidden="true">
+          <div class="hobby-bg is-active" data-i="0">
+            <img src="https://media.valorant-api.com/maps/2bee0dc9-4ffe-519b-1cbd-7fbe763a6047/splash.png" alt="" loading="lazy" />
+            <video muted loop playsinline preload="none" data-pinned data-t="0,4.5"
+                   data-src="https://valorant.dyn.riotcdn.net/x/videos/release-13.05/d95f2acb-428c-2abd-3e6c-c2af3806bee9_default_universal.mp4"></video>
+          </div>
+          <div class="hobby-bg" data-i="1">
+            <img src="https://media.valorant-api.com/maps/2fe4ed3a-450a-948b-6d6b-e89a78e680a9/splash.png" alt="" loading="lazy" />
+            <video muted loop playsinline preload="none" data-pinned data-t="0,4"
+                   data-src="https://valorant.dyn.riotcdn.net/x/videos/release-13.05/bd9ebcc4-4a3a-b8cb-9cda-d5838341a4c0_default_universal.mp4"></video>
+          </div>
+          <div class="hobby-bg" data-i="2">
+            <img src="https://media.valorant-api.com/maps/92584fbe-486a-b1b2-9faa-39b0f486b498/splash.png" alt="" loading="lazy" />
+            <video muted loop playsinline preload="none" data-pinned data-t="0,4"
+                   data-src="https://valorant.dyn.riotcdn.net/x/videos/release-13.05/31277939-4cc5-0346-a8f3-8396a4428a71_default_universal.mp4"></video>
+          </div>
+          <div class="hobby-shade"></div>
+          <div class="absolute inset-0 grid-bg"></div>
+        </div>
+        <div class="sec-mark" data-mark-i18n="nav.hobbies" aria-hidden="true"></div>
+        <div class="hobby-big" aria-hidden="true"><span id="hobbyNo">01</span></div>
+
+        <div class="hobby-inner">
+          <div class="sec-head"><span class="sec-no">05</span><h2 class="title" data-i18n="hobbies.title"></h2><i class="sec-line"></i></div>
+          <p class="mt-3 text-val-cream/60 max-w-xl hidden sm:block" data-i18n="hobbies.sub"></p>
+
+          <div class="hobby-panels">
+            <!-- 01 Gaming -->
+            <article class="hobby is-active" data-i="0">
+              <div class="hobby-text">
+                <p class="tag" data-s data-i18n="hobby1.tag"></p>
+                <h3 class="hobby-title" data-s>Valorant</h3>
+                <p class="hobby-desc" data-s data-i18n="hobby1.text"></p>
+                <div class="flex flex-wrap gap-2 mt-5" data-s>
+                  <span class="chip" data-i18n="hobby1.c1"></span><span class="chip" data-i18n="hobby1.c2"></span><span class="chip" data-i18n="hobby1.c3"></span>
+                </div>
+              </div>
+              <div class="hobby-visual">
+                <img class="hobby-agent" data-parallax src="https://media.valorant-api.com/agents/eb93336a-449b-9c1b-0a54-a891f7921d69/fullportrait.png" alt="Valorant agent Phoenix" loading="lazy" />
+              </div>
+            </article>
+
+            <!-- 02 Movies -->
+            <article class="hobby" data-i="1">
+              <div class="hobby-text">
+                <p class="tag" data-s data-i18n="hobby2.tag"></p>
+                <h3 class="hobby-title" data-s>Forrest Gump</h3>
+                <p class="hobby-desc" data-s data-i18n="hobby2.text"></p>
+                <blockquote class="hobby-quote" data-s>
+                  <p data-i18n="hobby2.quote"></p>
+                  <cite>— Forrest Gump (1994)</cite>
+                </blockquote>
+              </div>
+              <div class="hobby-visual">
+                <img class="hobby-agent" data-parallax src="https://media.valorant-api.com/agents/569fdd95-4d10-43ab-ca70-79becc718b46/fullportrait.png" alt="Valorant agent Sage" loading="lazy" />
+              </div>
+            </article>
+
+            <!-- 03 Music -->
+            <article class="hobby" data-i="2">
+              <div class="hobby-text">
+                <p class="tag" data-s data-i18n="hobby3.tag"></p>
+                <h3 class="hobby-title" data-s data-i18n="hobby3.title"></h3>
+                <p class="hobby-desc" data-s data-i18n="hobby3.text"></p>
+                <ul class="mt-5 space-y-3 max-w-md" data-s>
+                  <li class="track" data-track="0"><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><b>3 STRIKES</b><small data-i18n="hobby3.fav"></small></li>
+                  <li class="track" data-track="1"><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><b>Bye</b><small data-i18n="hobby3.fav"></small></li>
+                </ul>
+              </div>
+              <div class="hobby-visual">
+                <div class="vinyl" data-parallax aria-hidden="true"><div class="vinyl-label"><span>LHN</span></div></div>
+                <img class="hobby-agent hobby-agent-sm" data-parallax src="https://media.valorant-api.com/agents/8e253930-4c05-31dd-1b6c-968525494517/fullportrait.png" alt="Valorant agent Omen" loading="lazy" />
+              </div>
+            </article>
+          </div>
+
+          <div class="hobby-rail" role="tablist" aria-label="Hobbies">
+            <div class="hobby-rail-line"><i id="hobbyFill"></i></div>
+            <button class="rail-node is-active" role="tab" data-go="0"><b>01</b><span data-i18n="hobby1.tag"></span></button>
+            <button class="rail-node" role="tab" data-go="1"><b>02</b><span data-i18n="hobby2.tag"></span></button>
+            <button class="rail-node" role="tab" data-go="2"><b>03</b><span data-i18n="hobby3.tag"></span></button>
+            <span class="scroll-hint" data-i18n="hobbies.scroll"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section relative overflow-hidden">
+      <img src="https://media.valorant-api.com/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/fullportrait.png" alt="" class="absolute right-0 bottom-0 h-[80%] opacity-20 md:opacity-40 object-contain pointer-events-none" loading="lazy" />
+      <div class="sec-mark" data-mark-i18n="nav.contact" aria-hidden="true"></div>
+      <div class="relative max-w-6xl mx-auto px-5">
+        <div class="sec-head" data-reveal><span class="sec-no">06</span><h2 class="title" data-i18n="contact.title"></h2><i class="sec-line"></i></div>
+        <p class="mt-4 text-val-cream/70 max-w-xl" data-reveal data-i18n="contact.sub"></p>
+        <div id="contactGrid" class="grid sm:grid-cols-2 gap-4 mt-10 max-w-2xl"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/5 py-6 text-center text-sm text-val-cream/40 px-5">
+    © <span id="year"></span> Le Hoang Nhi · <span data-i18n="footer.note"></span>
+  </footer>
+
+  <script src="js/icons.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
