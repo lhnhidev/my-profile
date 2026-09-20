@@ -3,7 +3,7 @@
   const GH = "https://github.com/lhnhidev/";
   const t = (l, key) => (I18N[l] && I18N[l][key]) || key;
   let lang = "vi";
-  try { lang = localStorage.getItem("lang") || (navigator.language.startsWith("vi") ? "vi" : "en"); } catch (e) {}
+  try { lang = localStorage.getItem("lang") || (navigator.language.startsWith("vi") ? "vi" : navigator.language.startsWith("ja") ? "ja" : "en"); } catch (e) {}
 
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
@@ -30,7 +30,7 @@
     $("#langBars").innerHTML = LANGS.map(l => `
       <div data-reveal>
         <div class="flex justify-between font-display tracking-widest uppercase text-sm mb-1">
-          <span>${l.name}</span><span class="text-val-red">${l.n} repos</span>
+          <span>${l.name}</span><span class="text-val-red">${l.n} ${t(lang, "skills.repos")}</span>
         </div>
         <div class="bar"><i data-w="${Math.round(l.n / LANGS[0].n * 100)}"></i></div>
       </div>`).join("");

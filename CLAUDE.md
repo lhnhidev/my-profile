@@ -32,7 +32,7 @@ Trang tham khảo có sẵn của chủ dự án: https://lhnhidev.github.io/my-
 
 - Phải dùng hình ảnh của Valorant để trang trí, minh họa, nhưng không lạm dụng. Ưu tiên dùng làm nền và điểm nhấn trang trí.
 - Bảng màu lấy theo bảng màu của Valorant.
-- Hỗ trợ 2 ngôn ngữ: **Anh và Việt**. Mọi văn bản hiển thị trên giao diện phải có đủ hai phiên bản, không hard-code một ngôn ngữ.
+- Hỗ trợ 3 ngôn ngữ: **Anh, Việt và Nhật** (nút EN / VI / JA). Mọi văn bản hiển thị trên giao diện phải có đủ ba phiên bản (thêm vào `js/i18n.js`), không hard-code một ngôn ngữ.
 
 ## Workflow
 
@@ -42,4 +42,4 @@ Sau khi code xong, luôn kiểm tra giao diện hiện tại:
 2. Có lỗi font không.
 3. Có lỗi animation không.
 4. Đối chiếu lại với các thiết kế tham khảo để xác nhận style còn phù hợp.
-5. Kiểm tra responsive trên laptop và mobile, cùng cả hai ngôn ngữ Anh/Việt.
+5. Kiểm tra responsive trên laptop và mobile, cùng cả ba ngôn ngữ Anh/Việt/Nhật (chú ý font Noto Sans JP và việc ngắt dòng chữ Nhật).
