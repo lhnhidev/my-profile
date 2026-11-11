@@ -15,13 +15,13 @@ window.I18N = {
     "hero.cta1": "View projects", "hero.cta2": "Contact me",
     "stats.repos": "Repositories", "stats.followers": "Followers", "stats.gpa": "GPA / 4.0",
     "about.title": "About me", "about.badge": "DUELIST · DEV",
-    "about.p1": "I'm Le Hoang Nhi (lhnhidev), a Software Engineering student at Can Tho University focusing on full-stack development with .NET and React, following Clean Architecture principles.",
-    "about.p2": "Besides freelance and internship work, I explore graph algorithms, AI-assisted apps, robotics simulation with Webots and MQTT, and I like to practise by remaking my own projects better each time.",
+    "about.p1": "I'm Le Hoang Nhi (lhnhidev), a Software Engineer working as a full-stack developer with Ruby on Rails and React. I build reliable, maintainable products, from the database up to the interface.",
+    "about.p2": "I mostly work with React, Node.js and .NET, and I have hands-on experience as a freelancer, taking projects from requirements to delivery.",
     "about.quote": "Fueled by coffee, the lord of vibe coding, and a professional Stack Overflow translator.",
     "about.schoolLabel": "Education", "about.school": "Can Tho University · 2023–2027",
     "about.locLabel": "Location", "about.loc": "Vietnam (UTC+7)",
     "about.stackLabel": "Main stack",
-    "about.interestLabel": "Interests", "about.interest": "Clean Architecture, algorithms, IoT, AI",
+    "about.interestLabel": "Interests", "about.interest": "IoT, Algorithms, AI, Vibe coding, Claude, Codex",
     "exp.title": "Career", "exp.sub": "Where I've been playing so far: internship, freelance and university.",
     "exp.current": "Current", "exp.remote": "Remote", "exp.onsite": "On-site",
     "edu.title": "Education", "edu.school": "Can Tho University", "edu.major": "Software Engineering", "edu.years": "2023 – 2027 (expected)", "edu.gpa": "GPA",
@@ -50,13 +50,13 @@ window.I18N = {
     "hero.cta1": "Xem dự án", "hero.cta2": "Liên hệ",
     "stats.repos": "Repository", "stats.followers": "Người theo dõi", "stats.gpa": "GPA / 4.0",
     "about.title": "Về mình", "about.badge": "DUELIST · DEV",
-    "about.p1": "Mình là Lê Hoàng Nhi (lhnhidev), sinh viên Kỹ thuật phần mềm tại Đại học Cần Thơ, tập trung vào phát triển full-stack với .NET và React theo nguyên tắc Clean Architecture.",
-    "about.p2": "Ngoài freelance và thực tập, mình tìm hiểu thuật toán đồ thị, ứng dụng có AI, mô phỏng robot với Webots và MQTT, và hay luyện tay bằng cách làm lại dự án cũ tốt hơn.",
+    "about.p1": "Mình là Lê Hoàng Nhi (lhnhidev), kỹ sư phần mềm, hiện đảm nhiệm vị trí full-stack developer với Ruby on Rails và React. Mình xây dựng những sản phẩm ổn định, dễ bảo trì, từ cơ sở dữ liệu đến giao diện.",
+    "about.p2": "Công nghệ mình sử dụng nhiều nhất là React, Node.js và .NET. Mình cũng có kinh nghiệm làm freelancer, tự mình đảm nhận dự án từ phân tích yêu cầu đến bàn giao.",
     "about.quote": "Chạy bằng cà phê, chúa tể của vibe coding và dịch giả Stack Overflow chuyên nghiệp.",
     "about.schoolLabel": "Học vấn", "about.school": "Đại học Cần Thơ · 2023–2027",
     "about.locLabel": "Địa điểm", "about.loc": "Việt Nam (UTC+7)",
     "about.stackLabel": "Công nghệ chính",
-    "about.interestLabel": "Quan tâm", "about.interest": "Clean Architecture, thuật toán, IoT, AI",
+    "about.interestLabel": "Quan tâm", "about.interest": "IoT, Thuật toán, AI, Vibe coding, Claude, Codex",
     "exp.title": "Sự nghiệp", "exp.sub": "Những chặng mình đã đi qua: thực tập, freelance và đại học.",
     "exp.current": "Hiện tại", "exp.remote": "Từ xa", "exp.onsite": "Tại văn phòng",
     "edu.title": "Học vấn", "edu.school": "Đại học Cần Thơ", "edu.major": "Kỹ thuật phần mềm", "edu.years": "2023 – 2027 (dự kiến)", "edu.gpa": "GPA",
@@ -85,13 +85,13 @@ window.I18N = {
     "hero.cta1": "プロジェクトを見る", "hero.cta2": "連絡する",
     "stats.repos": "リポジトリ", "stats.followers": "フォロワー", "stats.gpa": "GPA / 4.0",
     "about.title": "私について", "about.badge": "DUELIST · DEV",
-    "about.p1": "Le Hoang Nhi(lhnhidev)です。カントー大学のソフトウェア工学専攻の学生で、.NETとReactを使ったフルスタック開発に取り組み、クリーンアーキテクチャの原則を意識しています。",
-    "about.p2": "フリーランスやインターンの傍ら、グラフアルゴリズム、AIを活用したアプリ、WebotsとMQTTによるロボットシミュレーションを探求しています。自分のプロジェクトを作り直して、毎回より良くする練習をするのが好きです。",
+    "about.p1": "Le Hoang Nhi(lhnhidev)です。ソフトウェアエンジニアとして、現在はRuby on RailsとReactを用いたフルスタック開発を担当しています。データベースからUIまで、安定して保守しやすいプロダクトづくりを心がけています。",
+    "about.p2": "主にReact、Node.js、.NETを使用しています。フリーランスとしての経験もあり、要件定義から納品までを一貫して担当してきました。",
     "about.quote": "コーヒーで動き、バイブコーディングの王で、プロのStack Overflow翻訳者。",
     "about.schoolLabel": "学歴", "about.school": "カントー大学 · 2023–2027",
     "about.locLabel": "所在地", "about.loc": "ベトナム(UTC+7)",
     "about.stackLabel": "主な技術",
-    "about.interestLabel": "関心分野", "about.interest": "クリーンアーキテクチャ、アルゴリズム、IoT、AI",
+    "about.interestLabel": "関心分野", "about.interest": "IoT、アルゴリズム、AI、バイブコーディング、Claude、Codex",
     "exp.title": "キャリア", "exp.sub": "これまで歩んできた道のり:インターン、フリーランス、大学。",
     "exp.current": "現在", "exp.remote": "リモート", "exp.onsite": "オンサイト",
     "edu.title": "学歴", "edu.school": "カントー大学", "edu.major": "ソフトウェア工学", "edu.years": "2023 – 2027(卒業見込み)", "edu.gpa": "GPA",
@@ -121,7 +121,7 @@ window.SKILLS = [
   { key: "skills.other", role: ROLE.duelist, items: ["Python", "Webots", "MQTT", "C"] }
 ];
 
-window.BADGES = ["Pull Shark ×3", "Pair Extraordinaire ×2", "YOLO", "Quickdraw"];
+window.BADGES = ["Pull Shark ×3", "Pair Extraordinaire ×3", "Galaxy Brain", "YOLO", "Quickdraw"];
 
 window.CONTACTS = [
   { icon: "github", label: "GitHub", value: "lhnhidev", href: "https://github.com/lhnhidev", primary: true },
@@ -133,6 +133,14 @@ window.CONTACTS = [
 ];
 
 window.PROJECTS = [
+  { name: "Dark", repo: "dark", lang: "Rust",
+    en: "A lightweight terminal workbench for reviewing AI-generated code and running coding agents across multiple models. Built in Rust.",
+    vi: "Terminal workbench gọn nhẹ để review code do AI sinh ra và chạy coding agent trên nhiều mô hình. Viết bằng Rust.",
+    ja: "AIが生成したコードのレビューと、複数モデルでのコーディングエージェント実行を行う軽量ターミナルワークベンチ。Rustで開発しています。" },
+  { name: "Simple MD", repo: "simple-md", lang: "C++",
+    en: "An ultra-lightweight native Windows Markdown editor in C++, with optional MCP integration for AI.",
+    vi: "Trình soạn thảo Markdown native siêu nhẹ cho Windows viết bằng C++, hỗ trợ tích hợp MCP cho AI (tuỳ chọn).",
+    ja: "C++製の超軽量なWindowsネイティブMarkdownエディタ。AI向けのMCP連携(任意)に対応しています。" },
   { name: "Euler Cycle Virtualisation", live: "https://euler-cycle-project.vercel.app", repo: "euler-cycle-virtualisation-ecv", lang: "TypeScript",
     en: "Interactive platform that visualises the Hierholzer algorithm in real time, inspired by the Seven Bridges of Königsberg. Web and desktop.",
     vi: "Nền tảng tương tác trực quan hoá thuật toán Hierholzer theo thời gian thực, lấy cảm hứng từ bài toán Bảy cây cầu Königsberg. Có bản web và desktop.",
@@ -172,7 +180,7 @@ window.PROJECTS = [
 ];
 
 window.LANGS = [
-  { name: "JavaScript", n: 12 }, { name: "TypeScript", n: 11 }, { name: "HTML", n: 8 },
+  { name: "JavaScript", n: 13 }, { name: "TypeScript", n: 11 }, { name: "HTML", n: 8 },
   { name: "C#", n: 2 }, { name: "Vue", n: 2 }, { name: "CSS", n: 2 }
 ];
 
