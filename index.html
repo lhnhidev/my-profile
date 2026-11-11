@@ -39,7 +39,7 @@
         <li><a class="nav-link" href="#contact" data-i18n="nav.contact"></a></li>
       </ul>
       <div class="flex items-center gap-3">
-        <!-- Music player: spinning disc, click to pick a track -->
+        <!-- TEMP DISABLED: music player (restore by removing this comment wrapper; js/main.js skips init when #player is missing)
         <div class="player" id="player">
           <button id="discBtn" class="disc-btn" aria-haspopup="true" aria-expanded="false" aria-controls="playerPop" data-i18n-aria="player.title">
             <span class="disc" aria-hidden="true"></span>
@@ -55,6 +55,7 @@
           </div>
           <div class="player-hint" data-i18n="player.hint"></div>
         </div>
+        -->
         <div class="flex font-display tracking-widest text-sm border border-white/20" role="group" aria-label="Language">
           <button class="lang-btn" data-lang="en">EN</button>
           <button class="lang-btn" data-lang="vi">VI</button>
@@ -268,10 +269,12 @@
                 <p class="tag" data-s data-i18n="hobby3.tag"></p>
                 <h3 class="hobby-title" data-s data-i18n="hobby3.title"></h3>
                 <p class="hobby-desc" data-s data-i18n="hobby3.text"></p>
+                <!-- TEMP DISABLED: track list
                 <ul class="mt-5 space-y-3 max-w-md" data-s>
                   <li class="track" data-track="0"><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><b>3 STRIKES</b><small data-i18n="hobby3.fav"></small></li>
                   <li class="track" data-track="1"><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><b>Bye</b><small data-i18n="hobby3.fav"></small></li>
                 </ul>
+                -->
               </div>
               <div class="hobby-visual">
                 <div class="vinyl" data-parallax aria-hidden="true"><div class="vinyl-label"><span>LHN</span></div></div>
