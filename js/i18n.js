@@ -10,7 +10,7 @@ window.I18N = {
     "hobby3.tag": "Music", "hobby3.title": "On repeat", "hobby3.text": "Music keeps me company while I code. These two are my favourite tracks right now.", "hobby3.fav": "Favourite",
     "nav.about": "About", "nav.experience": "Experience", "nav.skills": "Skills", "nav.projects": "Projects", "nav.contact": "Contact",
     "hero.tag": "// Developer Profile",
-    "hero.lead": "Software Engineering student building full-stack web apps with .NET, React and Node.js, from freelance products for schools to algorithm visualisers and IoT simulations.",
+    "hero.lead": "Software Engineering student - Can Tho University K49.",
     "hero.status": "Intern Fullstack Developer @ Dogo Corporation",
     "hero.cta1": "View projects", "hero.cta2": "Contact me",
     "stats.repos": "Repositories", "stats.followers": "Followers", "stats.gpa": "GPA / 4.0",
@@ -45,7 +45,7 @@ window.I18N = {
     "hobby3.tag": "Nghe nhạc", "hobby3.title": "Nghe đi nghe lại", "hobby3.text": "Âm nhạc luôn đồng hành cùng mình khi code. Đây là hai bài mình thích nhất hiện tại.", "hobby3.fav": "Yêu thích",
     "nav.about": "Giới thiệu", "nav.experience": "Kinh nghiệm", "nav.skills": "Kỹ năng", "nav.projects": "Dự án", "nav.contact": "Liên hệ",
     "hero.tag": "// Hồ sơ lập trình viên",
-    "hero.lead": "Sinh viên Kỹ thuật phần mềm, xây dựng ứng dụng web full-stack với .NET, React và Node.js, từ sản phẩm freelance cho trường học đến công cụ trực quan hoá thuật toán và mô phỏng IoT.",
+    "hero.lead": "Sinh viên Kỹ thuật phần mềm - Cần Thơ University K49.",
     "hero.status": "Thực tập sinh Fullstack tại Dogo Corporation",
     "hero.cta1": "Xem dự án", "hero.cta2": "Liên hệ",
     "stats.repos": "Repository", "stats.followers": "Người theo dõi", "stats.gpa": "GPA / 4.0",
@@ -80,7 +80,7 @@ window.I18N = {
     "hobby3.tag": "音楽", "hobby3.title": "リピート再生", "hobby3.text": "コーディング中はいつも音楽がそばにあります。今のお気に入りの2曲です。", "hobby3.fav": "お気に入り",
     "nav.about": "自己紹介", "nav.experience": "経歴", "nav.skills": "スキル", "nav.projects": "プロジェクト", "nav.contact": "連絡先",
     "hero.tag": "// 開発者プロフィール",
-    "hero.lead": "ソフトウェア工学専攻の学生。.NET、React、Node.jsでフルスタックWebアプリを開発しています。学校向けのフリーランス案件から、アルゴリズムの可視化ツール、IoTシミュレーションまで手がけています。",
+    "hero.lead": "ソフトウェア工学専攻の学生 - カントー大学 K49。",
     "hero.status": "Dogo Corporation フルスタック開発インターン",
     "hero.cta1": "プロジェクトを見る", "hero.cta2": "連絡する",
     "stats.repos": "リポジトリ", "stats.followers": "フォロワー", "stats.gpa": "GPA / 4.0",
@@ -179,9 +179,9 @@ window.LANGS = [
 window.TICKER = ["REACT", "TYPESCRIPT", ".NET", "NODE.JS", "RUBY ON RAILS", "POSTGRESQL", "REDIS", "DOCKER", "TAILWIND", "VUE", "MQTT", "WEBOTS"];
 
 window.ROLES = [
-  { en: "Full-stack Web Developer", vi: "Lập trình viên Web Full-stack", ja: "フルスタックWebデベロッパー" },
-  { en: ".NET & React Builder", vi: "Người xây dựng với .NET & React", ja: ".NET & Reactビルダー" },
-  { en: "Algorithm & IoT Explorer", vi: "Người khám phá Thuật toán & IoT", ja: "アルゴリズム & IoTエクスプローラー" }
+  { en: "Fullstack Developer", vi: "Fullstack Developer", ja: "フルスタックデベロッパー" },
+  { en: "React, .NET, Nodejs", vi: "React, .NET, Nodejs", ja: "React, .NET, Nodejs" },
+  { en: "Student at CTU", vi: "Student at CTU", ja: "カントー大学の学生 (CTU)" }
 ];
 
 window.EXPERIENCE = [

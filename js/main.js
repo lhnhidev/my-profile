@@ -4,6 +4,7 @@
   const t = (l, key) => (I18N[l] && I18N[l][key]) || key;
   let lang = "vi";
   try { lang = localStorage.getItem("lang") || (navigator.language.startsWith("vi") ? "vi" : navigator.language.startsWith("ja") ? "ja" : "en"); } catch (e) {}
+  let ri = 0;
 
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
@@ -96,6 +97,10 @@
     $$("[data-i18n-aria]").forEach(el => { el.setAttribute("aria-label", t(lang, el.dataset.i18nAria)); });
     $$("[data-mark-i18n]").forEach(el => { el.dataset.mark = t(lang, el.dataset.markI18n); });
     $$(".lang-btn").forEach(b => b.classList.toggle("active", b.dataset.lang === lang));
+    const roleEl = $("#rotator");
+    if (roleEl && window.ROLES && window.ROLES[ri]) {
+      roleEl.textContent = window.ROLES[ri][lang];
+    }
     renderDynamic();
     document.dispatchEvent(new CustomEvent("dynamic-rendered"));
   }
@@ -322,7 +327,6 @@
 
     // Rotating role text
     const roleEl = $("#rotator");
-    let ri = 0;
     setInterval(() => {
       ri = (ri + 1) % ROLES.length;
       animate(roleEl, { opacity: [1, 0], y: [0, -10] }, { duration: 0.25 }).then(() => {
